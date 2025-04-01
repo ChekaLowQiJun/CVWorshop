@@ -1,7 +1,18 @@
 from ultralytics import YOLO
 
-# Load a model
-model = YOLO("runs/detect/train3/weights/last.pt")  # load a partially trained model
+# Paths
+model_path = "/Users/cheka/Documents/Projects/Workshop/runs/detect/train3/weights/last.pt"
+data_path = "/Users/cheka/Documents/Projects/Workshop/RawDataset/YOLOData/data.yaml"
 
-# Resume training
-results = model.train(resume=True)
+# Load model
+model = YOLO(model_path)
+
+# Training parameters
+results = model.train(
+    resume=True,
+    data=data_path,
+    epochs=100,
+    batch=8,
+    imgsz=640,
+    device='cpu'
+)
