@@ -1,7 +1,7 @@
 from ultralytics import YOLO
 import cv2
 
-model = YOLO("//Users/cheka/Documents/Projects/Workshop/models/bestHandMovement.pt")
+model = YOLO("//Users/cheka/Documents/Projects/Workshop/models/bestHandMovement.pt") #Replace with the absolute path
 
 cap = cv2.VideoCapture(0)
 

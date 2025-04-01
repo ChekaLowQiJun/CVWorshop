@@ -10,7 +10,7 @@ imgsz: 640
 save: true
 save_period: 5
 cache: false
-device: cpu
+device: mps
 workers: 0
 project: null
 name: train3
